@@ -39,7 +39,7 @@ class MorSpider(scrapy.Spider):
         if os.path.exists(file_name):
             # Read existing file
             existing_df = pd.read_excel(file_name, engine='openpyxl')
-            # Append new data
+         
             df = pd.concat([existing_df, df], ignore_index=True)
 
         # Save data to Excel
